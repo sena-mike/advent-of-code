@@ -1,7 +1,8 @@
 import Foundation
 
 enum PasswordPolicy {
-    case characterRequirement(Character, Int, Int)    
+    case characterRequirement(Character, Int, Int)
+    // case characterPosition(Character, Int, Int)
 }
 
 extension String {
@@ -13,8 +14,8 @@ extension String {
         }
     }
 }
-    
-func parse(input: String) -> (PasswordPolicy, String) {
+
+func parseCharacterRequirement(input: String) -> (PasswordPolicy, String) {
 
     let components = input.components(separatedBy: " ")
 
