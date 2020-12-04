@@ -3,7 +3,7 @@
 print(day2Input
     .split { $0.isNewline }
     .map { String($0) }
-    .map { parseCharacterRequirement(input: $0) }
+    .map { parsePositionRequirement(input: $0) }
     .filter { (policy, password) in 
         return password.isValidPassword(with:policy) 
         }.count)
